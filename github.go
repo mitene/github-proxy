@@ -44,7 +44,7 @@ func (c *GithubClientImpl) MakeArchive(owner string, repo string, ref string, re
 		return "", err
 	}
 	downloadDir := filepath.Join(tempDir, repo)
-	err = os.Mkdir(downloadDir, 0777)
+	err = os.Mkdir(downloadDir, os.ModePerm)
 	if err != nil {
 		return "", err
 	}
@@ -106,17 +106,14 @@ func (c *GithubClientImpl) downloadRepoZip(owner string, repo string, ref string
 	if err != nil {
 		return "", err
 	}
-	defer os.Remove(tempFile.Name())
+	defer tempFile.Close()
 
-	zipFile := tempFile.Name() + ".zip"
-	file, err := os.Create(zipFile)
+	_, err = io.Copy(tempFile, resp.Body)
 	if err != nil {
 		return "", err
 	}
-	io.Copy(file, resp.Body)
-	file.Close()
 
-	return zipFile, nil
+	return tempFile.Name(), nil
 }
 
 func (c *GithubClientImpl) extract(file string, dest string) error {
