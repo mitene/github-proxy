@@ -6,3 +6,7 @@ build:
 .PHONY: run
 run:
 	go run ./cmd/gproxy
+
+.PHONY: fmt
+fmt:
+	go fmt

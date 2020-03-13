@@ -1,13 +1,17 @@
 package gproxy
 
 import (
+	"fmt"
 	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
 )
 
-func NewRouter() error {
+func NewRouter(port int) error {
+	if port == 0 {
+		log.Fatalln("invalid port")
+	}
 	r := mux.NewRouter()
 	r.HandleFunc("/get/{owner}/{repo}", GetHandler)
 	r.HandleFunc("/get/{owner}/{repo}", GetHandler).
@@ -16,8 +20,8 @@ func NewRouter() error {
 		Queries("path", "{path}")
 	http.Handle("/", r)
 
-	log.Println("server started")
-	err := http.ListenAndServe(":8080", nil)
+	log.Printf("server started: port: %d\n", port)
+	err := http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 	if err != nil {
 		return err
 	}
