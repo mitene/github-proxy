@@ -1,4 +1,4 @@
-module github.com/mitene/gproxy
+module github.com/mitene/github-proxy
 
 go 1.14
 

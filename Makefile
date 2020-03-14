@@ -1,11 +1,11 @@
 
 .PHONY: build
 build:
-	go build -o bin/gproxy ./cmd/gproxy
+	go build -o bin/github-proxy ./cmd/github-proxy
 
 .PHONY: run
 run:
-	go run ./cmd/gproxy
+	go run ./cmd/github-proxy
 
 .PHONY: fmt
 fmt:

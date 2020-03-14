@@ -1,4 +1,4 @@
-package gproxy
+package proxy
 
 import (
 	"archive/zip"

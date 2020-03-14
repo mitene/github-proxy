@@ -4,14 +4,14 @@ import (
 	"flag"
 	"log"
 
-	"github.com/mitene/gproxy"
+	proxy "github.com/mitene/github-proxy"
 )
 
 func main() {
 	port := flag.Int("port", 8080, "http port")
 	flag.Parse()
 
-	err := gproxy.NewRouter(*port)
+	err := proxy.NewRouter(*port)
 	if err != nil {
 		log.Fatal(err)
 	}
