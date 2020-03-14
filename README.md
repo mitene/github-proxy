@@ -26,9 +26,18 @@ Command line option
 ```
 $ wget --content-disposition "http://localhost:8080/get/mitene/github-proxy?path=cmd"
 ```
+
 This gets cmd directory of mitene repository in the form of tgz file.
 
-GET params
+## Endpoint
+
+Download starts after compressing the specified repository path.
+
+```
+/get/{owner}/{repository}
+```
+
+## GET params
 
 | Parameter | Description | Default |
 |-----------|---------------------------------------------|---------|
