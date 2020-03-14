@@ -40,6 +40,10 @@ GET params
 
 [Owner]-[Repository]-[Ref].[Type]
 
+## Working with private repositories
+
+Set personal access token in environment variable `GITHUB_ACCESS_TOKEN`.
+
 ### Example
 
 mitene-github-proxy-master.tgz
