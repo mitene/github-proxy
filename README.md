@@ -2,14 +2,14 @@
 
 github-proxy is a proxy that can archive any directory in the specified GitHub repository tree and deliver it via HTTP.
 
-# Installation
+## Installation
 
 
 ```
 $ go get -u github.com/mitene/github-proxy
 ```
 
-# Usage
+## Usage
 
 ```
 $ github-proxy [options]
@@ -17,7 +17,7 @@ $ github-proxy [options]
 
 The command starts the HTTP server.
 
-## Command line option
+### Command option
 
 | Parameter | Description | Default |
 |-----------|---------------------------------------------|---------|
@@ -63,6 +63,6 @@ This gets cmd directory of mitene repository in the form of tgz file.
 
 Set personal access token in environment variable `GITHUB_ACCESS_TOKEN`.
 
-# License
+## License
 
 The source code is licensed MIT.
