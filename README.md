@@ -21,15 +21,9 @@ Command line option
 | -port | HTTP server port | 8080 |
 
 
-## Example to get
-
-```
-$ wget --content-disposition "http://localhost:8080/get/mitene/github-proxy?path=cmd"
-```
-
-This gets cmd directory of mitene repository in the form of tgz file.
-
 ## Endpoint
+
+### get
 
 Download starts after compressing the specified repository path.
 
@@ -37,7 +31,7 @@ Download starts after compressing the specified repository path.
 /get/{owner}/{repository}
 ```
 
-## GET params
+#### GET params
 
 | Parameter | Description | Default |
 |-----------|---------------------------------------------|---------|
@@ -45,7 +39,16 @@ Download starts after compressing the specified repository path.
 | type | archive formats. supported zip, tgz, tar,gz | tgz |
 | path | path in GitHub repository | / |
 
-## Rules for downloaded file name
+
+#### Example to get
+
+```
+$ wget --content-disposition "http://localhost:8080/get/mitene/github-proxy?path=cmd"
+```
+
+This gets cmd directory of mitene repository in the form of tgz file.
+
+#### Rules for downloaded file name
 
 [Owner]-[Repository]-[Ref].[Type]
 
