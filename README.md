@@ -14,7 +14,10 @@ $ go get -u github.com/mitene/github-proxy
 ```
 $ github-proxy [options]
 ```
-Command line option
+
+The command starts the HTTP server.
+
+## Command line option
 
 | Parameter | Description | Default |
 |-----------|---------------------------------------------|---------|
