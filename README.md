@@ -53,15 +53,15 @@ This gets cmd directory of mitene repository in the form of tgz file.
 
 #### Rules for downloaded file name
 
-[Owner]-[Repository]-[Ref].[Type]
+`Owner`-`Repository`-`Ref`.`Type`
+
+### Example
+
+`mitene-github-proxy-master.tgz`
 
 ## Working with private repositories
 
 Set personal access token in environment variable `GITHUB_ACCESS_TOKEN`.
-
-### Example
-
-mitene-github-proxy-master.tgz
 
 # License
 
