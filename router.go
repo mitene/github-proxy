@@ -13,8 +13,8 @@ func NewRouter(port int) error {
 		log.Fatalln("invalid port")
 	}
 	r := mux.NewRouter()
-	r.HandleFunc("/get/{owner}/{repo}", GetHandler)
-	r.HandleFunc("/get/{owner}/{repo}", GetHandler).
+	r.HandleFunc("/repo/{owner}/{repo}", RepoHandler)
+	r.HandleFunc("/repo/{owner}/{repo}", RepoHandler).
 		Queries("ref", "{ref}").
 		Queries("type", "{type}").
 		Queries("path", "{path}")

@@ -26,12 +26,12 @@ The command starts the HTTP server.
 
 ## Endpoint
 
-### get
+### repo
 
 Download starts after compressing the specified repository path.
 
 ```
-/get/{owner}/{repository}
+/repo/{owner}/{repository}
 ```
 
 #### GET params
@@ -46,7 +46,7 @@ Download starts after compressing the specified repository path.
 #### Example to get
 
 ```
-$ wget --content-disposition "http://localhost:8080/get/mitene/github-proxy?path=cmd"
+$ wget --content-disposition "http://localhost:8080/repo/mitene/github-proxy?path=cmd"
 ```
 
 This gets cmd directory of mitene repository in the form of tgz file.

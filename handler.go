@@ -13,7 +13,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func GetHandler(w http.ResponseWriter, r *http.Request) {
+func RepoHandler(w http.ResponseWriter, r *http.Request) {
 	archiveDir, err := ioutil.TempDir("", "")
 	if err != nil {
 		log.Fatalln(err)
