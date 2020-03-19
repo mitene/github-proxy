@@ -26,7 +26,7 @@ type GithubClientImpl struct {
 
 func NewGithubClient() GithubClient {
 	var tc *http.Client
-	token, ok := os.LookupEnv("GITHUB_ACCESS_TOKEN")
+	token, ok := os.LookupEnv("GITHUB_TOKEN")
 	if ok {
 		ts := oauth2.StaticTokenSource(
 			&oauth2.Token{AccessToken: token},

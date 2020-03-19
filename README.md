@@ -61,7 +61,7 @@ This gets cmd directory of mitene repository in the form of tgz file.
 
 ## Working with private repositories
 
-Set personal access token in environment variable `GITHUB_ACCESS_TOKEN`.
+Set personal access token in environment variable `GITHUB_TOKEN`.
 
 ## License
 
